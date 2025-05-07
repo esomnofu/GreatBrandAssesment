@@ -10,8 +10,7 @@ final class ApiService {
 
   //Start: No BearerToken Calls
   final Map<String, String> _authorizationHeader = {
-    'Content-Type': 'application/json; charset=UTF-8',
-    'token': 'crals9pr01qhk4bqotb0crals9pr01qhk4bqotbg',
+    'Content-Type': 'application/json; charset=UTF-8'
   };
 
   Future<dynamic> getRequest(String url) async {
