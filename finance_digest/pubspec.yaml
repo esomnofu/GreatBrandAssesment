@@ -30,6 +30,7 @@ environment:
 dependencies:
   flutter_secure_storage:
   provider:
+  intl:
   flutter:
     sdk: flutter
 
