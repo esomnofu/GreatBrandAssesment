@@ -34,6 +34,8 @@ dependencies:
   intl:
   http:
   flutter_dotenv:
+  # webview_flutter:
+  url_launcher:
   flutter:
     sdk: flutter
 

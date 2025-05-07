@@ -3,7 +3,7 @@ import 'package:finance_digest/components/news_card.dart';
 import 'package:finance_digest/components/news_listing.dart';
 import 'package:finance_digest/components/no_news.dart';
 import 'package:finance_digest/modules/news/news_vm.dart';
-import 'package:finance_digest/widgets/spacers.dart';
+import 'package:finance_digest/widgets/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
 
