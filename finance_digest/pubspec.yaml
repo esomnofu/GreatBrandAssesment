@@ -31,6 +31,7 @@ dependencies:
   flutter_secure_storage:
   provider:
   intl:
+  http:
   flutter:
     sdk: flutter
 

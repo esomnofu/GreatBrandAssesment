@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:finance_digest/base/base_vm.dart';
 import 'package:finance_digest/modules/models/news.dart';
+import 'package:finance_digest/services/news_api_service.dart';
 import 'package:flutter/material.dart';
 
 class NewsViewModel extends BaseViewModel {
@@ -22,6 +23,7 @@ class NewsViewModel extends BaseViewModel {
     try {
       isLoading = true;
       //api call
+      final response = await NewsApiService.shared().getNewsListing();
       _newsList = [
         News(
             category: "top news",
