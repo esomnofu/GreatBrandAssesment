@@ -7,8 +7,7 @@ class BaseView<T extends BaseViewModel> extends StatelessWidget {
   final T Function(BuildContext) vmBuilder;
   final Widget Function(BuildContext, T) builder;
 
-  const BaseView({Key? key, required this.vmBuilder, required this.builder})
-      : super(key: key);
+  const BaseView({super.key, required this.vmBuilder, required this.builder});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +22,7 @@ class BaseView<T extends BaseViewModel> extends StatelessWidget {
   Widget _buildScreenContent(BuildContext context, T viewModel, Widget? child) {
     if (!viewModel.isInitialized && viewModel.isLoading == true) {
       return Container(
-          color: Colors.blue, child: const Center(child: Loader()));
+          color: Colors.transparent, child: const Center(child: Loader()));
     } else {
       return Stack(
         children: [

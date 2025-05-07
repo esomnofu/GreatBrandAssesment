@@ -16,8 +16,11 @@ final class NewsApiService {
       String url =
           "${AppUrl.baseUrl}${AppUrl.newsListUrl}?category=general&token=$token";
       final response = await ApiService.shared().getRequest(url);
+      final newsList = newsFromJson(response.body);
+      return newsList;
     } catch (e) {
       debugPrint(e.toString());
+      return null;
     }
   }
 }
