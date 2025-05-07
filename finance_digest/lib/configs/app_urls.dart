@@ -1,3 +1,5 @@
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
 class AppUrl {
   static String baseUrl = Environment.baseUrl;
   static String env = Environment.env;
@@ -20,15 +22,13 @@ class BaseUrlEnv {
 }
 
 String getBaseUrl(String env) {
-  //will change env when other environments urls are available
-  //for now all will be same
   switch (env) {
     case BaseUrlEnv.live:
-      return "https://finnhub.io/api/v1";
+      return dotenv.env['LIVE_BASE_URL'] ?? '';
     case BaseUrlEnv.pilot:
-      return "https://finnhub.io/api/v1";
+      return dotenv.env['PILOT_BASE_URL'] ?? '';
     case BaseUrlEnv.test:
     default:
-      return "https://finnhub.io/api/v1";
+      return dotenv.env['TEST_BASE_URL'] ?? '';
   }
 }
