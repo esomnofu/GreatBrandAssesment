@@ -34,7 +34,7 @@ dependencies:
   intl:
   http:
   flutter_dotenv:
-  # webview_flutter:
+  permission_handler:
   url_launcher:
   flutter:
     sdk: flutter
@@ -61,6 +61,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
+    - assets/images/
     - .env
 
   # An image asset can refer to one or more resolution-specific "variants", see

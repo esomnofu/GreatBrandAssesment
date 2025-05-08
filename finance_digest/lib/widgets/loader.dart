@@ -18,16 +18,16 @@ class Loader extends StatelessWidget {
       alignment: Alignment.center,
       children: [
         Container(
-          color: Colors.blueAccent.withValues(alpha: 0.4),
+          color: AppColors.topHeaderColor.withValues(alpha: 0.4),
         ),
         SizedBox(
           width: width,
           height: height,
           child: CircularProgressIndicator(
             strokeWidth: strokeWidth,
-            backgroundColor: AppColors.topHeaderColor,
+            backgroundColor: Colors.blue,
             valueColor: AlwaysStoppedAnimation<Color>(
-              Colors.grey.withValues(alpha: 0.7),
+              Colors.white,
             ),
           ),
         ),

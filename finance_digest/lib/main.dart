@@ -1,4 +1,4 @@
-import 'package:finance_digest/modules/news/news_screen.dart';
+import 'package:finance_digest/modules/onboarding/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
@@ -21,13 +21,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Finance Digest',
+      title: 'Blott',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
       debugShowCheckedModeBanner: false,
-      home: const NewsScreen(),
+      home: const SplashScreen(),
     );
   }
 }

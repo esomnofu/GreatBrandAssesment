@@ -23,7 +23,7 @@ Widget _buildScreen(BuildContext context, NewsViewModel vm) {
       backgroundColor: Colors.black,
       appBar: AppBar(
         title: Text(
-          "Hey Christian",
+          "Hey ${vm.firstName}",
         ),
         backgroundColor: AppColors.topHeaderColor,
         titleTextStyle: TextStyle(
@@ -31,9 +31,7 @@ Widget _buildScreen(BuildContext context, NewsViewModel vm) {
       ),
       body: SmartRefresher(
           enablePullDown: true,
-          enablePullUp: true,
           header: WaterDropHeader(waterDropColor: AppColors.topHeaderColor),
-          footer: ClassicFooter(),
           controller: vm.refreshController,
           onRefresh: vm.onRefresh,
           child: vm.newsList.isEmpty
