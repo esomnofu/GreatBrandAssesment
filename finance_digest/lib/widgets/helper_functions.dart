@@ -22,7 +22,6 @@ navigateToScreen(BuildContext context, Widget screen) {
 }
 
 Future<void> launchInAppBrowser(String url) async {
-  print("Launching url: $url");
   await launchUrl(Uri.parse(url),
       mode: LaunchMode.inAppBrowserView,
       browserConfiguration: BrowserConfiguration(showTitle: true));

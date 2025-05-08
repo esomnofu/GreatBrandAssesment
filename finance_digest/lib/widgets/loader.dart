@@ -1,3 +1,4 @@
+import 'package:finance_digest/configs/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class Loader extends StatelessWidget {
@@ -24,7 +25,7 @@ class Loader extends StatelessWidget {
           height: height,
           child: CircularProgressIndicator(
             strokeWidth: strokeWidth,
-            backgroundColor: Colors.blue,
+            backgroundColor: AppColors.topHeaderColor,
             valueColor: AlwaysStoppedAnimation<Color>(
               Colors.grey.withValues(alpha: 0.7),
             ),

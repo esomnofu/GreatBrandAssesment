@@ -1,7 +1,6 @@
 import 'package:finance_digest/configs/app_urls.dart';
 import 'package:finance_digest/modules/models/news.dart';
 import 'package:finance_digest/services/base_api_service.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 final class NewsApiService {
@@ -19,7 +18,6 @@ final class NewsApiService {
       final newsList = newsFromJson(response.body);
       return newsList;
     } catch (e) {
-      debugPrint(e.toString());
       return null;
     }
   }

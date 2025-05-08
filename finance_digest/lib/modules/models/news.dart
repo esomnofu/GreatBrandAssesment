@@ -11,7 +11,7 @@ String newsToJson(List<News> data) =>
 
 class News {
   String? category;
-  DateTime? datetime;
+  DateTime datetime;
   String? headline;
   int? id;
   String? image;
@@ -22,7 +22,7 @@ class News {
 
   News({
     this.category,
-    this.datetime,
+    required this.datetime,
     this.headline,
     this.id,
     this.image,

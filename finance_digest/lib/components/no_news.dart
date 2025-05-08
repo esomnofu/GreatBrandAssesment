@@ -1,5 +1,4 @@
 import 'package:finance_digest/widgets/helper_functions.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class NoNewsPage extends StatelessWidget {
@@ -12,28 +11,16 @@ class NoNewsPage extends StatelessWidget {
       width: getScreenWidth(context),
       height: getScreenHeight(context),
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          ClipRRect(
-              borderRadius: BorderRadius.circular(8.0),
-              child: Image.network(
-                  "https://www.shutterstock.com/image-vector/vector-oops-symbol-600nw-133546157.jpg",
-                  fit: BoxFit.cover,
-                  width: getScreenWidth(context) - 50,
-                  height: 300.0)),
           addVerticalSpacing(10),
-          Text(
-            "No News Available yet...",
-          ),
-          addVerticalSpacing(10),
-          CupertinoButton(
-            onPressed: () => refetchNews!(),
-            color: Colors.blue,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
             child: Text(
-              'Retry',
+              "Something went wrong. Please try again later or pull down to refresh,",
               style: TextStyle(color: Colors.white),
             ),
-          )
+          ),
         ],
       ),
     );

@@ -1,9 +1,8 @@
 import 'package:finance_digest/base/base_screen.dart';
-import 'package:finance_digest/components/news_card.dart';
 import 'package:finance_digest/components/news_listing.dart';
 import 'package:finance_digest/components/no_news.dart';
+import 'package:finance_digest/configs/app_colors.dart';
 import 'package:finance_digest/modules/news/news_vm.dart';
-import 'package:finance_digest/widgets/helper_functions.dart';
 import 'package:flutter/material.dart';
 import 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
 
@@ -21,24 +20,25 @@ class NewsScreen extends StatelessWidget {
 
 Widget _buildScreen(BuildContext context, NewsViewModel vm) {
   return Scaffold(
+      backgroundColor: Colors.black,
       appBar: AppBar(
         title: Text(
-          "General News",
+          "Hey Christian",
         ),
-        backgroundColor: Colors.blue,
+        backgroundColor: AppColors.topHeaderColor,
         titleTextStyle: TextStyle(
             fontSize: 21, color: Colors.white, fontWeight: FontWeight.bold),
       ),
-      body: vm.newsList.isEmpty
-          ? NoNewsPage(
-              refetchNews: () => vm.fetchNewsListing(),
-            )
-          : SmartRefresher(
-              enablePullDown: true,
-              enablePullUp: true,
-              header: WaterDropHeader(waterDropColor: Colors.blue),
-              footer: ClassicFooter(),
-              controller: vm.refreshController,
-              onRefresh: vm.onRefresh,
-              child: NewsListPage(newsList: vm.newsList)));
+      body: SmartRefresher(
+          enablePullDown: true,
+          enablePullUp: true,
+          header: WaterDropHeader(waterDropColor: AppColors.topHeaderColor),
+          footer: ClassicFooter(),
+          controller: vm.refreshController,
+          onRefresh: vm.onRefresh,
+          child: vm.newsList.isEmpty
+              ? NoNewsPage(
+                  refetchNews: () => vm.fetchNewsListing(),
+                )
+              : NewsListPage(newsList: vm.newsList)));
 }
