@@ -2,15 +2,10 @@ import 'dart:async';
 import 'package:finance_digest/base/base_vm.dart';
 import 'package:finance_digest/modules/models/news.dart';
 import 'package:finance_digest/services/news_api_service.dart';
-import 'package:flutter/material.dart';
 import 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
 
 class NewsViewModel extends BaseViewModel {
-  BuildContext context;
-
-  NewsViewModel({
-    required this.context,
-  });
+  NewsViewModel();
 
   @override
   FutureOr<void> init() async {

@@ -32,7 +32,7 @@ class NewsCard extends StatelessWidget {
                     addHorizontalSpacing(20),
                     Expanded(
                       child: SizedBox(
-                        height: 150,
+                        height: 120,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.spaceAround,
                           children: [

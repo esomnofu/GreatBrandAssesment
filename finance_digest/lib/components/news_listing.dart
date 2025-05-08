@@ -20,10 +20,7 @@ class NewsListPage extends StatelessWidget {
                   var news = newsList[index];
                   return GestureDetector(
                     onTap: () async => await launchInAppBrowser(news.url ?? ""),
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: NewsCard(news: news),
-                    ),
+                    child: NewsCard(news: news),
                   );
                 },
                 separatorBuilder: (ctx, index) => addVerticalSpacing(0),

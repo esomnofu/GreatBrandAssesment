@@ -12,7 +12,7 @@ class NewsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BaseView<NewsViewModel>(
-      vmBuilder: (context) => NewsViewModel(context: context),
+      vmBuilder: (context) => NewsViewModel(),
       builder: _buildScreen,
     );
   }
