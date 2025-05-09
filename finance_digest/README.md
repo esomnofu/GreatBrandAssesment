@@ -1,4 +1,4 @@
-# finance_digest
+# Blott
 
 A new Flutter project.
 
