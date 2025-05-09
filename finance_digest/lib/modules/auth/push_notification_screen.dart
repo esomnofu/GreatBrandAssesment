@@ -1,11 +1,7 @@
 import 'package:finance_digest/base/base_screen.dart';
-import 'package:finance_digest/configs/app_colors.dart';
 import 'package:finance_digest/modules/auth/push_vm.dart';
-import 'package:finance_digest/modules/auth/sign_up_vm.dart';
-import 'package:finance_digest/widgets/bottom_border_textfield.dart';
 import 'package:finance_digest/widgets/helper_functions.dart';
 import 'package:finance_digest/widgets/primary_button.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class PushNotificationScreen extends StatelessWidget {
@@ -64,7 +60,8 @@ Widget _buildScreen(BuildContext context, PushNotificationViewModel vm) {
             Spacer(),
             PrimaryButton(
                 title: "Continue",
-                onPressed: () => vm.triggerPushNotificationRequest())
+                onPressed: () async =>
+                    await vm.triggerPushNotificationRequest())
           ],
         ),
       ),

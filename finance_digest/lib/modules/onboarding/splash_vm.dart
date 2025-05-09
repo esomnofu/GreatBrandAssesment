@@ -25,8 +25,7 @@ class SplashViewModel extends BaseViewModel {
         await SecureStorage.shared().getValue(SecureStorageKeys.lastName);
     if (context.mounted) {
       if (fname.trim().isNotEmpty && lname.trim().isNotEmpty) {
-        // navigateToScreenAndRemoveAll(context, NewsScreen());
-        navigateToScreen(context, SignUpScreen());
+        navigateToScreenAndRemoveAll(context, NewsScreen());
       } else {
         navigateToScreen(context, SignUpScreen());
       }
